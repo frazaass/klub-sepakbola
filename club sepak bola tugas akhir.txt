@@ -1,0 +1,22 @@
+.Model Small
+.Code
+Org 100h
+
+TData:
+JMP Prosses 
+Klub DB            "Nama klub : Arema$"
+Asal DB   0DH,0AH, "Asal klub   : Malang$"
+Berdiri DB   0DH,0AH, "Tahun berdiri  : 1987$"
+Fans DB         0DH,0AH, "Nama fans  : Aremania$"
+Prosses:
+MOV AH,9H
+LEA DX,Klub 
+INT 21H
+LEA DX,Asal
+INT 21H
+LEA DX,Berdiri
+INT 21H
+LEA DX,Fans
+INT 21H
+INT 20H
+END TData
